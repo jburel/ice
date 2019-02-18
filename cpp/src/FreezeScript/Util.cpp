@@ -208,8 +208,8 @@ FreezeScript::CatalogDataMap
 FreezeScript::readCatalog(const Ice::CommunicatorPtr& communicator, const string& dbEnvName)
 {
     CatalogDataMap result;
-
-    DbEnv dbEnv(0);
+    const unsigned int param = 0;
+    DbEnv dbEnv(param);
     try
     {
 #ifdef _WIN32

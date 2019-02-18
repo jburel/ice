@@ -766,8 +766,9 @@ run(const Ice::StringSeq& originalArgs, const Ice::CommunicatorPtr& communicator
     //
     // Transform the database.
     //
-    DbEnv dbEnv(0);
-    DbEnv dbEnvNew(0);
+    const unsigned int param = 0;
+    DbEnv dbEnv(param);
+    DbEnv dbEnvNew(param);
     Freeze::TransactionPtr txNew;
     Freeze::ConnectionPtr connection;
     Freeze::ConnectionPtr connectionNew;

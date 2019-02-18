@@ -530,7 +530,8 @@ Freeze::SharedDbEnv::SharedDbEnv(const std::string& envName,
     {
         if(_env == 0)
         {
-            _envHolder.reset(new DbEnv(0));
+            const unsigned int param = 0;
+            _envHolder.reset(new DbEnv(param));
             _env = _envHolder.get();
 
             if(_trace >= 1)
